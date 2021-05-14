@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'ridiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+.modal-open .blurSection{
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(5px);
+    transition:.2s;
+}
+.modal-backdrop{
+    background-color: rgba(0,0,0,0.2) !important;
+}
+.menuStyle{
+    position:absolute;
+    left:0px;
+    margin:20px;
+}
+.ridi{
+    font-family:"ridiBatang"
+}
+.navImg:hover{
+	transform:scale(1.05);
+    transition:.5s;
+}
+.navImg{
+    transition:.5s;
+}
+.homeCircle:hover {
+	transform:scale(1.05);
+    transition:.5s;
+}
+.homeCircle{
+    transition:.5s;
+}
+body{
+    font-size:10px;
+}
+.menuBarCircle{
+    border-radius:15px;
+    background-color:rgba(123,121,124,0.9);
+    width:150px;
+    height:50px;
+    cursor:pointer;
+    transition:.5s;
+}
+.menuBarCircle:hover {
+	transform:scale(1.05);
+    transition:.5s;
+}
+.menuBarText{
+    color:white;
+}
+.menuBarImg{
+    width:50x;
+    height:50px;
+}
+.menuBarBox{
+    height:70vh;
+}
+body {
+    background-color: #f6f6f6;
+    background-image:
+      linear-gradient(90deg, #cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
+      linear-gradient(#cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
+      linear-gradient(#e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+      linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+      linear-gradient(transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+      linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, #e0e0e0 99px, #e0e0e0 100px),
+      linear-gradient(90deg, transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+      linear-gradient(transparent 0px, transparent 1px, #f6f6f6 1px, #f6f6f6 99px, transparent 99px, transparent 100px),
+      linear-gradient(#cdcccc, #cdcccc);
+    background-size:100px 100%, 100% 100px, 100% 10px, 10px 100%, 100% 100px, 100px 100%, 100px 100%, 100px 100px, 100px 100px;
+    
+}
+.homeCircle{
+    border-radius:30px;
+    background-color:#ffffff;
+    box-shadow: 5px 7px 2px 3px rgba(0,0,0,0.16);
+    height:30vh;
+    min-height:233px;
+}
+.modal-body{
+    background-color:rgba(255,255,255,0) !important;
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color:rgba(255,255,255,0);
+    border: 1px solid rgba(0,0,0,0);
+    outline: 0;
+}

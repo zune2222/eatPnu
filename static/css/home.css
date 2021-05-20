@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'rixRegular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body.modal-content {
     position: relative;
     display: flex;
@@ -34,6 +40,9 @@ body.modal-content {
 }
 .ridi{
     font-family:"ridiBatang"
+}
+.rix{
+    font-family:"rixRegular"
 }
 .navImg:hover{
 	transform:scale(1.05);
@@ -108,4 +117,9 @@ body {
     background-color:rgba(255,255,255,0);
     border: 1px solid rgba(0,0,0,0);
     outline: 0;
+}
+.homePicture{
+    width:130px;
+    height:130px;
+    object-fit:contain;
 }

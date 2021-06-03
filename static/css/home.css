@@ -123,3 +123,6 @@ body {
     height:130px;
     object-fit:contain;
 }
+.foodPicture{
+    border-radius: 50%;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+    <div class="modal fade" id="menuBar" tabindex="-1" role="dialog" aria-hidden="true" style="font-size:1.4rem;">
+        <div class="modal-dialog menuStyle" style="vertical-align:middle;height:80vh;">
+            <div class="modal-body menuBarBox" style="overflow-x:hidden">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="menuBarCircle p-0 mx-1 my-1">
+                            <img class="menuBarImg d-inline-block" src="../img/login.png">
+                            <p class="d-inline-block menuBarText" onclick="location.href='/'">초기화면</p>
+                        </div>
+                        <div class="menuBarCircle p-0 mx-1 my-1">
+                            <img class="menuBarImg d-inline-block" src="../img/signup.png">
+                            <p class="d-inline-block menuBarText">아무거나</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid rix">
+            <div class="d-flex justify-content-between" style="width:100%;">
+                <p class="navbar-brand mx-3" onclick="menuBar()" style="cursor:pointer">eatEatPNU</p>
+                <img class="navImg" src="../img/navImg.png" style="width:60px; height:60px; cursor:pointer;"
+                    onclick="location.href='/'">
+            </div>
+        </div>
+    </nav>
+    <div class=blurSection>
+        <div style="margin-top:13vh;"></div>
+        <div class="container-fluid my-5">
+            <div class="row justify-content-center">
+                <div class="homeCircle mx-3 my-3 text-center col-11 col-md-9 col-lg-9" onclick="anyClick()">
+                    <div class="d-flex py-3 my-3"
+                        style="height:200px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/crazy.png" class="homePicture">
+                        <p class="ridi mx-5 my-3" style="font-size:2rem">아무거나 주세요.</p>
+                    </div>
+                    <p class="ridi my-3" style="font-size:2rem"></p>
+                </div>
+            </div>
+            <div id="addHere" class="row justify-content-center">
+
+            </div>
+        </div>
+        <div style="margin-bottom:10vh;"></div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+<script src="../js/menuBar.js"></script>
+<script src="../js/weatherAny.js"></script>
+</html>

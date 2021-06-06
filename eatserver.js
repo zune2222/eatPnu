@@ -26,6 +26,9 @@ app.get('/chineseFood', (req, res) => {
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'static', 'html', 'login.html'));
 });
+app.get('/weatherAny', (req, res) => {
+  res.sendFile(path.join(__dirname, 'static', 'html', 'weatherAny.html'));
+});
 app.listen(8090, () => {
   console.log('Express App on port 8090!');
 });

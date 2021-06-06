@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/menuBar.css">
+    <script src="../js/naverMap.js"></script>      
+</head>
+<body>
+    <div class="modal fade" id="menuBar" tabindex="-1" role="dialog" aria-hidden="true" style="font-size:1.4rem;">
+        <div class="modal-dialog menuStyle" style="vertical-align:middle;height:80vh;">
+            <div class="modal-body menuBarBox" style="overflow-x:hidden">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="menuBarCircle p-0 mx-1 my-1">
+                            <img class="menuBarImg d-inline-block" src="../img/login.png">
+                            <p class="d-inline-block menuBarText" onclick="location.href='/'">초기화면</p>
+                        </div>
+                        <div class="menuBarCircle p-0 mx-1 my-1">
+                            <img class="menuBarImg d-inline-block" src="../img/signup.png">
+                            <p class="d-inline-block menuBarText">아무거나</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid rix">
+            <div class="d-flex justify-content-between" style="width:100%;">
+                <p class="navbar-brand mx-3" onclick="menuBar()" style="cursor:pointer">eatEatPNU</p>
+                <img class="navImg" src="../img/navImg.png" style="width:60px; height:60px; cursor:pointer;"
+                    onclick="location.href='/'">
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="foodModal" style="z-index:999999999">
+		<div class="container-fluid ">
+			<div class="modal-dialog note-dialog">
+				<div class=modal-content>
+					<div class=modal-body>
+                        <div id="map" style="width:100%;height:90vh;"></div>    
+                        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6hbs0urscq"></script>
+                        <script>
+                        </script>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class=blurSection>
+        <div style="margin-top:13vh;"></div>
+        <div class="container-fluid my-5">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="foodBar ridi" onclick="korAll()">전체</div>
+                    <div class="foodBar ridi" onclick="jpRice()">밥</div>
+                    <div class="foodBar ridi" onclick="jpNoodle()">면</div>
+                    <div class="foodBar ridi" onclick="jpPig()">돈가스</div>
+                    <div class="foodBar ridi" onclick="jpNoodle()">초밥</div>
+                    <div class="foodBar ridi" onclick="jpNoodle()">텐동</div>
+                </div>
+                <div style="margin-top:20px;"></div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.229191154222406, 129.08385531759805,'카레야','http://naver.me/FeOCCNiK')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/j1.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">카레야</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem">한국인 입맛에 맞춘 일본 카레 전문점</p>
+                </div>
+            </div>
+        <div style="margin-bottom:10vh;"></div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+<script src="../js/menuBar.js"></script>
+<script src="../js/korFoodSel.js"></script>
+
+</html>

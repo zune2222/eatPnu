@@ -119,10 +119,19 @@ body {
     outline: 0;
 }
 .homePicture{
-    width:130px;
-    height:130px;
+    width:120px;
+    height:120px;
     object-fit:contain;
 }
 .foodPicture{
-    border-radius: 50%;
+    border-radius:50%;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.16);
+}
+.modal-dialog.note-dialog{
+	max-width:2000px;
+	z-index:9999999;
+	height:98vh;
+}
+.iw_inner{
+    margin:15px;
 }

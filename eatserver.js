@@ -1,32 +1,30 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-app.set('view engine','ejs');
-app.set('views',path.join(__dirname,'static','html'));
 app.use(express.static(path.join(__dirname, 'static')));
 app.get('/', (req, res) => {
-  res.render(path.join(__dirname, 'static','html', 'home'));
+  res.sendFile(path.join(__dirname, 'static','html', 'home.html'));
 });
 app.get('/koreanFood', (req, res) => {
-  res.render(path.join(__dirname, 'static', 'html', 'koreanFood'));
+  res.sendFile(path.join(__dirname, 'static', 'html', 'koreanFood.html'));
 });
 app.get('/meat', (req, res) => {
-  res.render(path.join(__dirname, 'static', 'html', 'meat'));
+  res.sendFile(path.join(__dirname, 'static', 'html', 'meat.html'));
 });
 app.get('/other', (req, res) => {
-  res.render(path.join(__dirname, 'static', 'html', 'other'));
+  res.sendFile(path.join(__dirname, 'static', 'html', 'other.html'));
 });
 app.get('/ramen', (req, res) => {
-  res.render(path.join(__dirname, 'static', 'html', 'ramen'));
+  res.sendFile(path.join(__dirname, 'static', 'html', 'ramen.html'));
 });
 app.get('/americanFood', (req, res) => {
-  res.render(path.join(__dirname, 'static', 'html', 'americanFood'));
+  res.sendFile(path.join(__dirname, 'static', 'html', 'americanFood.html'));
 });
 app.get('/chineseFood', (req, res) => {
-  res.render(path.join(__dirname, 'static', 'html', 'chineseFood'));
+  res.sendFile(path.join(__dirname, 'static', 'html', 'chineseFood.html'));
 });
 app.get('/login', (req, res) => {
-  res.render(path.join(__dirname, 'static', 'html', 'login'));
+  res.sendFile(path.join(__dirname, 'static', 'html', 'login.html'));
 });
 app.listen(8090, () => {
   console.log('Express App on port 8090!');

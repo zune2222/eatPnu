@@ -56,12 +56,19 @@
         <div class="container-fluid my-5">
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <div class="foodBar ridi" onclick="korAll()">전체</div>
-                    <div class="foodBar ridi" onclick="korRice()">중식</div>
+                    <div class="foodBar ridi" onclick="meatAll()">전체</div>
+                    <div class="foodBar ridi" onclick="meatMeat()">고기</div>
+                    <div class="foodBar ridi" onclick="meatNag()">낙곱새</div>
+                    <div class="foodBar ridi" style="width:100px" onclick="meatLeg()">족발,보쌈</div>
+                    <div class="foodBar ridi" onclick="meatSteak()">스테이크</div>
+                    <div class="foodBar ridi" style="width:150px"onclick="meatGob()">곱창,막창,대창</div>
+                    <div class="foodBar ridi" onclick="meatJju()">쭈꾸미</div>
+                    <div class="foodBar ridi" onclick="meatChickenFoot()">닭발</div>
+                    <div class="foodBar ridi" onclick="meatChicken()">닭</div>
                 </div>
                 <div style="margin-top:20px;"></div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'김해원조뒷고기','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.22951227755124, 129.08446562671034,'김해원조뒷고기','http://naver.me/xorKdpoz')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m1.png" class="foodPicture homePicture">
@@ -69,17 +76,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">저렴하고 가성비 좋은 고기집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'엉터리생고기','')">
-                    <div class="d-flex py-3 my-3"
-                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
-                        <img src="../img/m2.png" class="foodPicture homePicture">
-                        <p class="ridi mx-3 my-3" style="font-size:2rem">엉터리생고기</p>
-                    </div>
-                    <p class="ridi mx-3 my-3" style="font-size:1.3rem">무한 리필 삼겹살</p>
-                </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'지마미등갈비','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.230891942723744, 129.08551126919718,'지마미등갈비','http://naver.me/FYuarGaS')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m3.png" class="foodPicture homePicture">
@@ -87,8 +85,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">하루에 20인분만 받는 등갈비 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'개성상인','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.230256964411346, 129.08516082277052,'개성상인','http://naver.me/IG6KDlWX')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m4.png" class="foodPicture homePicture">
@@ -96,8 +94,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">무한리필로 행복한 삼겹살 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'홍보석술붗구이','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23088849301767, 129.08557030845716,'홍보석술붗구이','http://naver.me/5SWaAnIi')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m5.png" class="foodPicture homePicture">
@@ -105,8 +103,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">가성비 좋은 고기집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'구워삶기','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.231128507504174, 129.0856799208675,'구워삶기','http://naver.me/FyeRTTmj')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m6.png" class="foodPicture homePicture">
@@ -114,8 +112,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">개강 했으니까 매콤 불고기 전골</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'짚신매운갈비찜','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.2316369451161, 129.08590111424337,'짚신매운갈비찜','http://naver.me/5B1cdj07')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m7.png" class="foodPicture homePicture">
@@ -123,8 +121,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">맛깔나는 소갈비찜</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'돼지집딸','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.232465662819074, 129.08629107551542,'돼지집딸','http://naver.me/FS6ON0oJ')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m8.png" class="foodPicture homePicture">
@@ -132,8 +130,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">드라이에이징 숙성으로 더 맛있는 고기집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'칼집삼겹','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23276811158312, 129.08666724924083,'칼집삼겹','http://naver.me/5aVtYA7o')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m9.png" class="foodPicture homePicture">
@@ -141,8 +139,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">부대 삼겹살 애정한다</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'모름지기','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.232943674083, 129.08656126599445,'모름지기','http://naver.me/GkKJomaC')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m10.png" class="foodPicture homePicture">
@@ -150,8 +148,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">고기 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'시골통돼지볶음','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.2329978544915, 129.08628339816516,'시골통돼지볶음','http://naver.me/xAtWWtlj')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m11.png" class="foodPicture homePicture">
@@ -159,8 +157,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">무쇠판에 구워먹는 돈토마호크</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'껍사랑목사랑','')">
+                <div class="meatMeat col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.230835457128265, 129.08861422202483,'껍사랑목사랑','http://naver.me/GFpefX8g')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m12.png" class="foodPicture homePicture">
@@ -168,8 +166,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">돼지껍데기 생목살 구이 전문점</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'고래섬','')">
+                <div class="meatNag col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.231133344157136, 129.08521410465625,'고래섬','http://naver.me/FYuEofpb')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m13.png" class="foodPicture homePicture">
@@ -177,8 +175,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">혼밥하기 좋은 낙곱새</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'더만족','')">
+                <div class="meatLeg col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23310100603694, 129.08525633210442,'더만족','http://naver.me/FHYlJYAG')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m14.png" class="foodPicture homePicture">
@@ -186,8 +184,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'싸움의 고수','')">
+                <div class="meatLeg col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23021143811827, 129.08549223895693,'싸움의 고수','http://naver.me/FRDLRW9h')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m15.png" class="foodPicture homePicture">
@@ -195,8 +193,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">혼밥이 괜찮은 1인보쌈집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'시어링앤스터프','')">
+                <div class="meatSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.22896453928083, 129.08518349886302,'시어링앤스터프','http://naver.me/Gul0PZxU')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m16.png" class="foodPicture homePicture">
@@ -204,8 +202,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'잇쇼우안','')">
+                <div class="meatSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.2331095067432, 129.08651001618614,'잇쇼우안','http://naver.me/G14sY5Wd')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m17.png" class="foodPicture homePicture">
@@ -213,8 +211,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'신육간','')">
+                <div class="meatSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23308006019354, 129.08592723883294,'신육간','http://naver.me/GkKJBe91')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m18.png" class="foodPicture homePicture">
@@ -222,8 +220,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">숙성스테이크 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'설어정','')">
+                <div class="meatSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.22876332977723, 129.08774805182202,'설어정','http://naver.me/Goz5bPPl')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m19.png" class="foodPicture homePicture">
@@ -231,8 +229,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">부산 스테이크 인스타로 유명한 부대역맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'에픽키친','')">
+                <div class="meatSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23020542779635, 129.08648534755392,'에픽키친','http://naver.me/535Bl4Tr')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m20.png" class="foodPicture homePicture">
@@ -240,8 +238,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'함박해','')">
+                <div class="meatSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.2316936197166, 129.08757162922544,'함박해','http://naver.me/5Q4uqRN9')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m21.png" class="foodPicture homePicture">
@@ -249,8 +247,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">함박 스테이크 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'칠성돌곱창','')">
+                <div class="meatGob col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.228963061138856, 129.0854549924538,'칠성돌곱창','http://naver.me/5Tv3z0EH')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m22.png" class="foodPicture homePicture">
@@ -258,8 +256,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">곱창 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'곱창이야기','')">
+                <div class="meatGob col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23173331990824, 129.08676567107412,'곱창이야기','http://naver.me/5SWa1F2A')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m23.png" class="foodPicture homePicture">
@@ -267,8 +265,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">곱창 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'홍대개미','')">
+                <div class="meatGob col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.22954997577809, 129.0883260901584,'홍대개미','http://naver.me/5Z099Ntc')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m24.png" class="foodPicture homePicture">
@@ -276,8 +274,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">매운 대창 덮밥</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'우쭈쭈','')">
+                <div class="meatJju col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23031645697965, 129.08587378696183,'우쭈쭈','http://naver.me/5VeA83z1')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m25.png" class="foodPicture homePicture">
@@ -285,8 +283,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">주기별로 먹어줘야하는 존맛 쭈꾸미집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'발빠닭','')">
+                <div class="meatChickenFoot col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.22475234011708, 129.08124475890082,'발빠닭','http://naver.me/5lZCvlkz')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m26.png" class="foodPicture homePicture">
@@ -294,8 +292,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">닭발 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'크라운닭발','')">
+                <div class="meatChickenFoot col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23163121292153, 129.0873649655329,'크라운닭발','http://naver.me/5Am3sStM')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m27.png" class="foodPicture homePicture">
@@ -303,8 +301,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">후라이드와 즐기는 국물 닭발</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'내가찜한닭','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.231306791948164, 129.08492905564424,'내가찜한닭','http://naver.me/x9J5z0g7')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m28.png" class="foodPicture homePicture">
@@ -312,8 +310,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">찜닭</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'신천닭도리','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.232543659124644, 129.0850701955606,'신천닭도리','http://naver.me/G2UErSz5')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m29.png" class="foodPicture homePicture">
@@ -321,8 +319,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">닭볶음탕 안주로 달리는 술집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'땡삼이 닭도리','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23302647928194, 129.0860216401779,'땡삼이 닭도리','http://naver.me/ForHZ7zP')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m30.png" class="foodPicture homePicture">
@@ -330,8 +328,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">부대 닭도리탕 맛집 + 감자튀김</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'계성상회','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.22831764567014, 129.08705208689165,'계성상회','http://naver.me/xQON857I')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m31.png" class="foodPicture homePicture">
@@ -339,8 +337,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">닭특수부위전문점 닭고기 정식</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'유가네닭갈비','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23023476073599, 129.08530991649508,'유가네닭갈비','http://naver.me/GPrSx9Dg')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m32.png" class="foodPicture homePicture">
@@ -348,8 +346,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'윤스식당','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23196980924402, 129.0859708574075,'윤스식당','http://naver.me/FDQn0VV0')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m33.png" class="foodPicture homePicture">
@@ -357,8 +355,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">숯불닭갈비 맛집</p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'동키치킨','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23006148009207, 129.0839192214528,'동키치킨','http://naver.me/xM2jIkeF')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m34.png" class="foodPicture homePicture">
@@ -366,8 +364,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'칠칠켄터키','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23257819740643, 129.08491702350253,'칠칠켄터키','http://naver.me/FfMAColB')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m35.png" class="foodPicture homePicture">
@@ -375,8 +373,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'836 숯불바베큐치킨','')">
+                <div class="meatChicken col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.233095207837664, 129.08579610089672,'836 숯불바베큐치킨','http://naver.me/FqSiaQOo')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/m36.png" class="foodPicture homePicture">
@@ -394,5 +392,6 @@
     crossorigin="anonymous"></script>
 <script src="../js/menuBar.js"></script>
 <script src="../js/korFoodSel.js"></script>
+<script src="../js/meatFoodSel.js"></script>
 
-</html>
+</html>ㅍ

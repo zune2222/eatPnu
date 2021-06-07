@@ -4,7 +4,7 @@ function anyClick() {
         url: "http://api.openweathermap.org/data/2.5/weather?q=busan&appid=a40005b9dd55620b64c0889925acdd27",
         success: function (data) {
             var weather = data.weather[0].id
-            if (weather / 100 == 2) {
+            if (parseInt(weather / 100) == 2) {
                 $("#addHere").append(['<div class="homeCircle mx-3 my-3 text-center col-11 col-md-9 col-lg-9" onclick="location.href='+"'"+"/ramen"+"'"+'"'+'>',
                     '<div class="d-flex py-3 my-3"',
                     'style="height:200px; overflow: hidden; align-items: center; justify-content: center;">',
@@ -14,7 +14,7 @@ function anyClick() {
                     '<p class="ridi my-3" style="font-size:2rem"></p>',
                     '</div>'].join(''))
             }
-            else if (weather / 100 == 3) {
+            else if (parseInt(weather / 100) == 3) {
                 $("#addHere").append(['<div class="homeCircle mx-3 my-3 text-center col-11 col-md-9 col-lg-9" onclick="location.href='+"'"+"/americanFood"+"'"+'"'+'>',
                     '<div class="d-flex py-3 my-3"',
                     'style="height:200px; overflow: hidden; align-items: center; justify-content: center;">',
@@ -24,7 +24,7 @@ function anyClick() {
                     '<p class="ridi my-3" style="font-size:2rem"></p>',
                     '</div>'].join(''))
             }
-            else if (weather / 100 == 5) {
+            else if (parseInt(weather / 100) == 5) {
                 $("#addHere").append(['<div class="homeCircle mx-3 my-3 text-center col-11 col-md-9 col-lg-9" onclick="location.href='+"'"+"/koreanFood"+"'"+'"'+'>',
                     '<div class="d-flex py-3 my-3"',
                     'style="height:200px; overflow: hidden; align-items: center; justify-content: center;">',
@@ -34,7 +34,7 @@ function anyClick() {
                     '<p class="ridi my-3" style="font-size:2rem"></p>',
                     '</div>'].join(''))
             }
-            else if (weather / 100 == 6) {
+            else if (parseInt(weather / 100) == 6) {
                 $("#addHere").append(['<div class="homeCircle mx-3 my-3 text-center col-11 col-md-9 col-lg-9" onclick="location.href='+"'"+"/chineseFood"+"'"+'"'+'>',
                     '<div class="d-flex py-3 my-3"',
                     'style="height:200px; overflow: hidden; align-items: center; justify-content: center;">',
@@ -44,7 +44,7 @@ function anyClick() {
                     '<p class="ridi my-3" style="font-size:2rem"></p>',
                     '</div>'].join(''))
             }
-            else if (weather / 100 == 7) {
+            else if (parseInt(weather / 100) == 7) {
                 $("#addHere").append(['<div class="homeCircle mx-3 my-3 text-center col-11 col-md-9 col-lg-9" onclick="location.href='+"'"+"/other"+"'"+'"'+'>',
                     '<div class="d-flex py-3 my-3"',
                     'style="height:200px; overflow: hidden; align-items: center; justify-content: center;">',
@@ -64,7 +64,7 @@ function anyClick() {
                     '<p class="ridi my-3" style="font-size:2rem"></p>',
                     '</div>'].join(''))
             }
-            else if (weather / 100 == 8) {
+            else if (parseInt(weather / 100) == 8) {
                 $("#addHere").append(['<div class="homeCircle mx-3 my-3 text-center col-11 col-md-9 col-lg-9" onclick="location.href='+"'"+"/meat"+"'"+'"'+'>',
                     '<div class="d-flex py-3 my-3"',
                     'style="height:200px; overflow: hidden; align-items: center; justify-content: center;">',
@@ -74,7 +74,7 @@ function anyClick() {
                     '<p class="ridi my-3" style="font-size:2rem"></p>',
                     '</div>'].join(''))
             }
-            else if (weather / 100 == 9) {
+            else if (parseInt(weather / 100) == 9) {
                 $("#addHere").append(['<div class="homeCircle mx-3 my-3 text-center col-11 col-md-9 col-lg-9" onclick="location.href='+"'"+"/koreanFood"+"'"+'"'+'>',
                     '<div class="d-flex py-3 my-3"',
                     'style="height:200px; overflow: hidden; align-items: center; justify-content: center;">',
@@ -83,6 +83,9 @@ function anyClick() {
                     '</div>',
                     '<p class="ridi my-3" style="font-size:2rem"></p>',
                     '</div>'].join(''))
+            }
+            else{
+                alert("날씨가 안 불러와집니다!! ㅠ")
             }
         },
         error: function () {

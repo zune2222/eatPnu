@@ -21,7 +21,7 @@
                         </div>
                         <div class="menuBarCircle p-0 mx-1 my-1">
                             <img class="menuBarImg d-inline-block" src="../img/signup.png">
-                            <p class="d-inline-block menuBarText">아무거나</p>
+                            <p class="d-inline-block menuBarText" onclick="location.href='/weatherAny'">아무거나</p>
                         </div>
                     </div>
                 </div>
@@ -56,12 +56,12 @@
         <div class="container-fluid my-5">
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <div class="foodBar ridi" onclick="korAll()">전체</div>
+                    <div class="foodBar ridi" onclick="jpAll()">전체</div>
                     <div class="foodBar ridi" onclick="jpRice()">밥</div>
                     <div class="foodBar ridi" onclick="jpNoodle()">면</div>
                     <div class="foodBar ridi" onclick="jpPig()">돈가스</div>
-                    <div class="foodBar ridi" onclick="jpNoodle()">초밥</div>
-                    <div class="foodBar ridi" onclick="jpNoodle()">텐동</div>
+                    <div class="foodBar ridi" onclick="jpSushi()">초밥</div>
+                    <div class="foodBar ridi" onclick="jpTendong()">텐동</div>
                 </div>
                 <div style="margin-top:20px;"></div>
                 <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
@@ -82,8 +82,7 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">저렴하지만 구성은 결코 저렴하지 않은 일본 가정식</p>
                 </div>
-            </div>
-            <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
                     onclick="foodModal(35.23084349535035, 129.08506481024847,'야마벤또','http://naver.me/F2vYZVC3')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
@@ -92,8 +91,7 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">도시락 맛집</p>
                 </div>
-            </div>
-            <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
                     onclick="foodModal(35.23295768155237, 129.08651303312902,'키햐아','http://naver.me/FRD6OGX6')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
@@ -102,7 +100,7 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">장전동 배민 1위 맛집 일본가정식</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
                     onclick="foodModal(35.22987456851233, 129.08844951479261,'오키나와키친','http://naver.me/xH2nhzFS')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
@@ -111,8 +109,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">오키나와와 같은 분위기를 내고 싶다면</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'하나이미','http://naver.me/xZDOxQk0')">
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.230991142500145, 129.08815021913048,'하나이미','http://naver.me/xZDOxQk0')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j6.png" class="foodPicture homePicture">
@@ -120,8 +118,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">부대 밀푀유나베 룸 맛집</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'쿠카이야','http://naver.me/FeOCxVIC')">
+                <div class="noodle col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.230026458772876, 129.08412507005218,'쿠카이야','http://naver.me/FeOCxVIC')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j7.png" class="foodPicture homePicture">
@@ -129,8 +127,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">우동,소바</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'우마이도','http://naver.me/GlVmJzbt')">
+                <div class="noodle col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23013137138145, 129.08442871110532,'우마이도','http://naver.me/GlVmJzbt')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j8.png" class="foodPicture homePicture">
@@ -138,8 +136,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">진한 일본 라멘</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'사사야키','http://naver.me/Gz515M5X')">
+                <div class="noodle col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.2298125501745, 129.08564402241777,'사사야키','http://naver.me/Gz515M5X')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j9.png" class="foodPicture homePicture">
@@ -147,8 +145,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">일본식 라면</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'코하루','http://naver.me/FEJd4XwJ')">
+                <div class="noodle col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23198953745975, 129.08741562863824,'코하루','http://naver.me/FEJd4XwJ')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j10.png" class="foodPicture homePicture">
@@ -156,8 +154,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">돈코츠 라멘과 가라아케가 맛있는 라멘집</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'톤쇼우','http://naver.me/5vIYRnFQ')">
+                <div class="pigSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23046461708145, 129.08429353882462,'톤쇼우','http://naver.me/5vIYRnFQ')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j11.png" class="foodPicture homePicture">
@@ -165,8 +163,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'토흐','http://naver.me/GGhBjTA1')">
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.234504961003196, 129.08583508761942,'토흐','http://naver.me/GGhBjTA1')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j12.png" class="foodPicture homePicture">
@@ -174,8 +172,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'카츠안','')">
+                <div class="pigSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23013515641517, 129.0858054477323,'카츠안','http://naver.me/FDQXjjw5')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j13.png" class="foodPicture homePicture">
@@ -183,8 +181,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">바삭하게 맛있는 성북동 돈가스 + 쫄순</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="pigSteak col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23208841878395, 129.08542292141462,'교토밥상','http://naver.me/F0Kw7kPM')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j14.png" class="foodPicture homePicture">
@@ -192,8 +190,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">규카츠 맛집</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="sushi col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23226051895717, 129.08498147606355,'모시모시','http://naver.me/xL1ErM2q')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j15.png" class="foodPicture homePicture">
@@ -201,8 +199,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">스시 퀄리티 괜찮은 부산초밥</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="sushi col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23302542051187, 129.08543472475182,'스시심','http://naver.me/5h3Er08r')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j16.png" class="foodPicture homePicture">
@@ -210,8 +208,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">예약 맛집 초밥 니기리세트</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="sushi col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23017450148861, 129.08518861527384,'마마도마','http://naver.me/GFpeR9he')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j17.png" class="foodPicture homePicture">
@@ -219,8 +217,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">두툼하고 맛있는 연어초밥</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="sushi col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23739526963424, 129.08790739449117,'소풍경','http://naver.me/FYuqAvCs')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j18.png" class="foodPicture homePicture">
@@ -228,8 +226,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">스시 초밥 김밥 신상 맛집</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="sushi col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.2308144500157, 129.0874848773654,'정희옥스시','http://naver.me/xXrDxQVY')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j19.png" class="foodPicture homePicture">
@@ -237,8 +235,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">초밥 롤 맛집</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="sushi col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.23086507433606, 129.08798584067716,'스시심타카이','http://naver.me/GTgSPzl5')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j20.png" class="foodPicture homePicture">
@@ -246,8 +244,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">초밥 롤 맛집</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="sushi col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.26231340450349, 129.08790930182735,'토모','http://naver.me/IxDWRC3W')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j21.png" class="foodPicture homePicture">
@@ -255,8 +253,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem">참치 회 대박 맛있는 곳</p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="tendong col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.22934661965399, 129.08555818377368,'텐동코하루','http://naver.me/G99sSn5V')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j22.png" class="foodPicture homePicture">
@@ -264,8 +262,8 @@
                     </div>
                     <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
                 </div>
-            </div><div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
-                    onclick="foodModal(,'','')">
+                <div class="tendong col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(35.229584524463476, 129.0852937893186,'텐동롯코','http://naver.me/xWNiW5Jl')">
                     <div class="d-flex py-3 my-3"
                         style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
                         <img src="../img/j23.png" class="foodPicture homePicture">
@@ -283,5 +281,6 @@
     crossorigin="anonymous"></script>
 <script src="../js/menuBar.js"></script>
 <script src="../js/korFoodSel.js"></script>
+<script src="../js/japFoodSel.js"></script>
 
 </html>

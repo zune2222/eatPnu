@@ -1,59 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="kor">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>간단한 지도 표시하기</title>
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/menuBar.css">
+    <script src="../js/naverMap.js"></script>      
 </head>
 <body>
-<div id="map" style="width:100%;height:400px;"></div> 
-
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6hbs0urscq"></script>
-<script>
-    
-    var HOME_PATH = window.HOME_PATH || '.';
-    var cityhall = new naver.maps.LatLng(35.2291605,129.0816693),
-        map = new naver.maps.Map('map', {
-            center: cityhall,
-            zoom: 15
-        }),
-        marker = new naver.maps.Marker({
-            map: map,
-            position: cityhall
-        });
-    
-    var contentString = [
-            '<div class="iw_inner">',
-            '   <h3>서울특별시청</h3>',
-            '   <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br />',
-            '       <img src="'+ HOME_PATH +'/img/example/hi-seoul.jpg" width="55" height="55" alt="서울시청" class="thumb" /><br />',
-            '       02-120 | 공공,사회기관 &gt; 특별,광역시청<br />',
-            '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
-            '   </p>',
-            '</div>'
-        ].join('');
-    
-    var infowindow = new naver.maps.InfoWindow({
-        content: contentString,
-        maxWidth: 140,
-        backgroundColor: "#eee",
-        borderColor: "#2db400",
-        borderWidth: 5,
-        anchorSize: new naver.maps.Size(30, 30),
-        anchorSkew: true,
-        anchorColor: "#eee",
-        pixelOffset: new naver.maps.Point(20, -20)
-    });
-    
-    naver.maps.Event.addListener(marker, "click", function(e) {
-        if (infowindow.getMap()) {
-            infowindow.close();
-        } else {
-            infowindow.open(map, marker);
-        }
-    });
-</script>
+    <div class="modal fade" id="menuBar" tabindex="-1" role="dialog" aria-hidden="true" style="font-size:1.4rem;">
+        <div class="modal-dialog menuStyle" style="vertical-align:middle;height:80vh;">
+            <div class="modal-body menuBarBox" style="overflow-x:hidden">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="menuBarCircle p-0 mx-1 my-1">
+                            <img class="menuBarImg d-inline-block" src="../img/login.png">
+                            <p class="d-inline-block menuBarText" onclick="location.href='/'">초기화면</p>
+                        </div>
+                        <div class="menuBarCircle p-0 mx-1 my-1">
+                            <img class="menuBarImg d-inline-block" src="../img/signup.png">
+                            <p class="d-inline-block menuBarText" onclick="location.href='/weatherAny'">아무거나</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid rix">
+            <div class="d-flex justify-content-between" style="width:100%;">
+                <p class="navbar-brand mx-3" onclick="menuBar()" style="cursor:pointer">eatEatPNU</p>
+                <img class="navImg" src="../img/navImg.png" style="width:60px; height:60px; cursor:pointer;"
+                    onclick="location.href='/'">
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="foodModal" style="z-index:999999999">
+		<div class="container-fluid ">
+			<div class="modal-dialog note-dialog">
+				<div class=modal-content>
+					<div class=modal-body>
+                        <div id="map" style="width:100%;height:90vh;"></div>    
+                        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6hbs0urscq"></script>
+                        <script>
+                        </script>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class=blurSection>
+        <div style="margin-top:13vh;"></div>
+        <div class="container-fluid my-5">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="foodBar ridi" onclick="korAll()">전체</div>
+                    <div class="foodBar ridi" onclick="korRice()">중식</div>
+                </div>
+                <div style="margin-top:20px;"></div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'정문토스트','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o1.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">정문토스트</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
+                </div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'명물토스트','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o2.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">명물토스트</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem">생활의 달인에도 나온 부대 3단 토스트</p>
+                </div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'이삭토스트','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o3.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">이삭토스트</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
+                </div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'소다미김밥','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o4.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">소다미김밥</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem">생활의 달인 맛집 분식집</p>
+                </div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'빨봉분식','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o5.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">빨봉분식</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem">(영업종료)</p>
+                </div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'디델리','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o6.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">디델리</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem">달짝지근한 라볶이가 있는 분식 맛집</p>
+                </div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'레오앤아그너스','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o7.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">레오앤아그너스</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
+                </div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'도르샐러드','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o8.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">도르샐러드</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
+                </div>
+                <div class="rice col-10 col-md-5 col-lg-3 homeCircle mx-3 my-3 text-center" style="cursor:pointer"
+                    onclick="foodModal(,'투고샐러드','')">
+                    <div class="d-flex py-3 my-3"
+                        style="height:130px; overflow: hidden; align-items: center; justify-content: center;">
+                        <img src="../img/o9.png" class="foodPicture homePicture">
+                        <p class="ridi mx-3 my-3" style="font-size:2rem">투고샐러드</p>
+                    </div>
+                    <p class="ridi mx-3 my-3" style="font-size:1.3rem"></p>
+                </div>
+            </div>
+        <div style="margin-bottom:10vh;"></div>
+    </div>
 </body>
-</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+<script src="../js/menuBar.js"></script>
+<script src="../js/korFoodSel.js"></script>
 
+</html>

@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 app.use(express.static(path.join(__dirname, 'static')));
+const favicon = require('serve-favicon');
+app.use(favicon(path.join(__dirname,'static','favicon.ico')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'static','html', 'home.html'));
 });

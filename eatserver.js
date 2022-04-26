@@ -34,6 +34,6 @@ app.get("/weatherAny", (req, res) => {
 app.get("/intro", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "html", "introduceMe.html"));
 });
-app.listen(8080, () => {
+app.listen(80, () => {
   console.log("Express App on port 8080!");
 });

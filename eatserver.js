@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const https = require("https");
 app.use(express.static(path.join(__dirname, "static")));
 const favicon = require("serve-favicon");
 app.use(favicon(path.join(__dirname, "static", "favicon.ico")));
@@ -35,4 +34,6 @@ app.get("/weatherAny", (req, res) => {
 app.get("/intro", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "html", "introduceMe.html"));
 });
-https.createServer(app).listen(8080);
+app.listen(8080, () => {
+  console.log("Express App on port 8080!");
+});
